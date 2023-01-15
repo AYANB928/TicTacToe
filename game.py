@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 
+#create a Tkinter instance and setting winning combinations, buttons for game, player symbols, and title of game
 class TicTacToe:
     def __init__(self):
         self.root = tk.Tk()
@@ -12,6 +13,7 @@ class TicTacToe:
         self.winning_combinations = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
         self.setup_gui()
 
+    #setting up Tic Tac Toe Board and Play/Quit Buttons 
     def setup_gui(self):
         for i, button in enumerate(self.buttons):
             button.grid(row=i//3, column=i%3)
@@ -21,6 +23,7 @@ class TicTacToe:
         self.quit_button = tk.Button(self.root, text="Quit", command=self.root.destroy)
         self.quit_button.grid(row=4, column=0, columnspan=3)
 
+    #function used to input user's turn 
     def play(self, button_id):
         button = self.buttons[button_id]
         if button["text"] == "":
@@ -28,7 +31,8 @@ class TicTacToe:
             if self.check_win(self.player):
                 return
             self.computer_play()
-
+    
+    #function used to input computer's turn 
     def computer_play(self):
         empty_buttons = [i for i in range(9) if self.buttons[i]["text"] == ""]
         if empty_buttons:
@@ -36,6 +40,7 @@ class TicTacToe:
             self.buttons[move].config(text=self.computer)
             self.check_win(self.computer)
 
+    #function used to check if user or computer won the game
     def check_win(self, player):
         for combo in self.winning_combinations:
             if all(self.buttons[i]["text"] == player for i in combo):
@@ -46,6 +51,7 @@ class TicTacToe:
             return True
         return False
 
+    #function used to display winner that won the game or display a tie  
     def game_over(self, winner, win_combo):
         if winner == "tie":
             messagebox.showinfo("Tie", "It's a tie!")
@@ -62,6 +68,7 @@ class TicTacToe:
         for button in self.buttons:
             button.config(state=tk.DISABLED)
 
+    #function used for play again button - resets board and allows player vs computer game to play again
     def play_again(self):
         for button in self.buttons:
             button.config(text="", state=tk.NORMAL, bg="SystemButtonFace")
@@ -70,6 +77,3 @@ class TicTacToe:
 if __name__ == "__main__":
     TicTacToe()
     tk.mainloop()
-
-
-
