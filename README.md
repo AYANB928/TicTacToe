@@ -19,4 +19,5 @@ To run program:
 What I plan to add in the future: 
 
 Sound effects that will play when either computer/user wins/loses
-Interchangable background color of user's choice 
+Settings for background color
+Number of Games played
