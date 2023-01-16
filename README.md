@@ -21,3 +21,4 @@ What I plan to add in the future:
 1. Sound effects that will play when either computer/user wins/loses
 2. Settings for background color
 3. Number of Games played
+4. Number of Wins/Loses for Computer/User
