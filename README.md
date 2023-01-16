@@ -18,6 +18,6 @@ To run program:
 
 What I plan to add in the future: 
 
-Sound effects that will play when either computer/user wins/loses
-Settings for background color
-Number of Games played
+1. Sound effects that will play when either computer/user wins/loses
+2. Settings for background color
+3. Number of Games played
