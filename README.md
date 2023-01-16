@@ -4,10 +4,13 @@ Game of Tic Tac Toe between Player and Computer is displayed using a GUI.
 
 This program creates a Tic-Tac-Toe game where the player plays against the computer. 
 The game is displayed using a GUI created with the Tkinter library. 
-The program has a "Play Again" button that allows the player to start a new game after the current game is over.
-The program has a "Quit" button that closes the program.
-If the computer wins, it will display "computer wins" 
-If the player wins it will display "you win".
+
+Program Includes: 
+A "Play Again" button that allows the player to start a new game after the current game is over.
+A "Quit" button that closes the program.
+Settings drop down menu for background color
+Display for computer: "computer wins" 
+Display for player: "you win".
 
 
 To run program: 
@@ -19,6 +22,5 @@ To run program:
 What I plan to add in the future: 
 
 1. Sound effects that will play when either computer/user wins/loses
-2. Settings for background color
 3. Number of Games played
 4. Number of Wins/Loses for Computer/User
